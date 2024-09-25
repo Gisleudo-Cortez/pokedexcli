@@ -3,11 +3,11 @@ package main
 import (
 	"time"
 
-	"github.com/bootdotdev/go-api-gate/courses/projects/pokedexcli/internal/pokeapi"
+	"github.com/Gisleudo-Cortez/pokedexcli/internal/pokeapi"
 )
 
 func main() {
-	pokeClient := pokeapi.NewClient(5 * time.Second)
+	pokeClient := pokeapi.NewClient(5*time.Second, time.Minute*5)
 	cfg := &config{
 		pokeapiClient: pokeClient,
 	}
